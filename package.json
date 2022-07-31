@@ -1,26 +1,26 @@
 {
-  "name": "contact-keeper-server",
+  "name": "contactkeeper-server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "serverapp": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run serverapp\" \"npm run client\""
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Janirudev/Contact-Keeper-Server.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.3.3",
-    "express": "^4.17.1",
-    "express-validator": "^6.9.2",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.14"
+  "bugs": {
+    "url": "https://github.com/Janirudev/Contact-Keeper-Server/issues"
   },
+  "homepage": "https://github.com/Janirudev/Contact-Keeper-Server#readme",
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.7"
+    "concurrently": "^7.3.0"
   }
 }
