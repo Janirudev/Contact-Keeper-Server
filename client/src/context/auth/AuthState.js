@@ -35,7 +35,7 @@ const AuthState = (props) => {
 
       dispatch({ type: USER_LOADED, payload: res.data });
     } catch (error) {
-      // dispatch({ type: AUTH_ERROR, payload: error.response.data.errors });
+      dispatch({ type: AUTH_ERROR, payload: error.response.data.errors });
     }
   };
 
@@ -98,7 +98,7 @@ const AuthState = (props) => {
   };
 
   // Logout
-  const logout = () => {};
+  const logout = () => dispatch({ type: LOGOUT });
 
   // Clear Errors
   const clearErrors = () => {

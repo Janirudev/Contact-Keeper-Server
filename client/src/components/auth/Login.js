@@ -41,8 +41,6 @@ const Login = (props) => {
         password,
       });
     }
-
-    console.log('Login Submit');
   };
 
   return (
